@@ -30,14 +30,15 @@ LyngkTestCase.prototype.tostring = function()
 {
     var temp = new Lyngk.coordinates('A',3);
     assertEquals(temp.toString() , 'A3');
-}
+};
 LyngkTestCase.prototype.tostringf = function()
 {
     var temp1 = new Lyngk.coordinates('A',1);
     assertEquals(temp1.toString() , 'A1');
-}
+};
 LyngkTestCase.prototype.testclone = function()
 {
     var temp2 = new Lyngk.coordinates('A',3);
-    assertEquals(temp2.toclone() , temp2);
-}
+    var temp3 = temp2.toclone();
+    assertEquals(temp2.toString() , temp3.toString());
+};
