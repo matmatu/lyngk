@@ -25,3 +25,14 @@ LyngkTestCase.prototype.test43 = function()
     assertEquals(compteur,43);
 
 };
+
+LyngkTestCase.prototype.tostring = function()
+{
+    var temp = new Lyngk.coordinates('A',3);
+    assertEquals(temp.toString() , 'A3');
+}
+LyngkTestCase.prototype.tostringf = function()
+{
+    var temp1 = new Lyngk.coordinates('A',1);
+    assertEquals(temp1.toString() , 'A1');
+}
