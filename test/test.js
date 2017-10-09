@@ -22,6 +22,6 @@ LyngkTestCase.prototype.test43 = function()
             }
         }
     }
-    assertEquals(count,43);
+    assertEquals(compteur,43);
 
 };
