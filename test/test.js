@@ -81,3 +81,10 @@ LyngkTestCase.prototype.test5PiecesIntersection = function()
 
     assertEquals(testInter.getState(), Lyngk.State.FULL_STACK);
 };
+LyngkTestCase.prototype.testInit = function()
+{
+    var engine = new Lyngk.Engine();
+    engine.init();
+
+    assertTrue(engine.checkInit());
+};
