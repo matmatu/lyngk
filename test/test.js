@@ -88,3 +88,10 @@ LyngkTestCase.prototype.testInit = function()
 
     assertTrue(engine.checkInit());
 };
+LyngkTestCase.prototype.testInit8 = function()
+{
+    var engine = new Lyngk.Engine();
+    engine.init8();
+
+    assertTrue(engine.checkInit8());
+};
