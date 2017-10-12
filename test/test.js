@@ -79,7 +79,7 @@ LyngkTestCase.prototype.test5PiecesIntersection = function()
     temp8.setPiece(new Lyngk.Piece(Lyngk.Color.RED));
     temp8.setPiece(new Lyngk.Piece(Lyngk.Color.BLACK));
 
-    assertEquals(testInter.getState(), Lyngk.State.FULL_STACK);
+    assertEquals(temp8.getState(), Lyngk.State.FULL_STACK);
 };
 LyngkTestCase.prototype.testInit = function()
 {
