@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f506860d-029c-4c7b-b0ed-d6abeea88d1b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test.js" afterPath="$PROJECT_DIR$/test/test.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,7 +26,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="292">
@@ -37,10 +36,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Intersection.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Intersection.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Intersection.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="122">
               <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
               <folding />
             </state>
@@ -268,7 +267,7 @@
       <workItem from="1505913105135" duration="4301000" />
       <workItem from="1506237169614" duration="5384000" />
       <workItem from="1506244007400" duration="117000" />
-      <workItem from="1507836909294" duration="3684000" />
+      <workItem from="1507836909294" duration="3724000" />
     </task>
     <task id="LOCAL-00001" summary="2.6 test+fonction">
       <created>1507837182944</created>
@@ -319,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1507840317107</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="2.10 test">
+      <created>1507840637897</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1507840637897</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -355,7 +361,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20322000" />
+    <option name="totallyTimeSpent" value="20362000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -394,7 +400,8 @@
     <MESSAGE value="2.8 fonction" />
     <MESSAGE value="2.9 test" />
     <MESSAGE value="2.9 fonction" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.9 fonction" />
+    <MESSAGE value="2.10 test" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.10 test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -527,18 +534,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Intersection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
           <caret line="79" column="55" lean-forward="true" selection-start-line="79" selection-start-column="55" selection-end-line="79" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Intersection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
           <folding />
         </state>
       </provider>
