@@ -32,5 +32,5 @@ Lyngk.Coordinates = function (c, l)
     this.calculerentier = function()
     {
         return colonne.charCodeAt(0) - 65 + ligne;
-    }
+    };
 };
