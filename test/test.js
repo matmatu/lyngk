@@ -28,17 +28,22 @@ LyngkTestCase.prototype.test43 = function()
 
 LyngkTestCase.prototype.tostring = function()
 {
-    var temp = new Lyngk.coordinates('A',3);
+    var temp = new Lyngk.Coordinates('A',3);
     assertEquals(temp.toString() , 'A3');
 };
 LyngkTestCase.prototype.tostringf = function()
 {
-    var temp1 = new Lyngk.coordinates('A',1);
+    var temp1 = new Lyngk.Coordinates('A',1);
     assertEquals(temp1.toString() , 'A1');
 };
 LyngkTestCase.prototype.testclone = function()
 {
-    var temp2 = new Lyngk.coordinates('A',3);
+    var temp2 = new Lyngk.Coordinates('A',3);
     var temp3 = temp2.toclone();
     assertEquals(temp2.toString() , temp3.toString());
+};
+LyngkTestCase.prototype.testhash = function()
+{
+    var temp4 = new Lyngk.Coordinates('A',3);
+    assertEquals(temp4.calculerentier() , 3);
 };

@@ -1,5 +1,5 @@
 "use strict";
-Lyngk.coordinates = function (c, l)
+Lyngk.Coordinates = function (c, l)
 {
     var colonne = c;
     var ligne = l;
@@ -26,7 +26,7 @@ Lyngk.coordinates = function (c, l)
     };
     this.toclone = function()
     {
-        var clone = new Lyngk.coordinates(colonne, ligne);
+        var clone = new Lyngk.Coordinates(colonne, ligne);
         return clone;
     };
     this.calculerentier = function()
