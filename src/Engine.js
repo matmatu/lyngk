@@ -39,7 +39,6 @@ Lyngk.Engine = function () {
     };
 
     this.move = function (inter1, inter2) {
-        if(inter1.getPile1() < 5 ) {
             if (checkmove(inter1, inter2) == true) {
                 if (inter2.getPile1() > 0) {
                     var pieces = inter1.takePieces();
@@ -49,7 +48,6 @@ Lyngk.Engine = function () {
                     }
                 }
             }
-        }
     };
     var checkmove = function(inter1, inter2)
     {
@@ -60,24 +58,22 @@ Lyngk.Engine = function () {
         var c1 = interc1.getcolonne();
         var c2 = interc2.getcolonne();
         var Diffc = (c1.charCodeAt(0) - (c2.charCodeAt(0)));
-        //colonne
-        if(Diffc == 0 )
-        {
-                if(Math.abs(l1-l2) == 1)
+        if(inter1.getPile1() < 5) {
+            if (Diffc == 0) {
+                if (Math.abs(l1 - l2) == 1)
                     return true;
                 return false;
-        }
-        else if(Diffc == 1)
-        {
-            if(l1-l2==-1 || l1-l2 == 0)
-                return true;
-            return false;
-        }
-        else if(Diffc == -1)
-        {
-            if(l1-l2== 1 || l1-l2 == 0)
-                return true;
-            return false;
+            }
+            else if (Diffc == 1) {
+                if (l1 - l2 == -1 || l1 - l2 == 0)
+                    return true;
+                return false;
+            }
+            else if (Diffc == -1) {
+                if (l1 - l2 == 1 || l1 - l2 == 0)
+                    return true;
+                return false;
+            }
         }
 
 

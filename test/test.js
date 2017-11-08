@@ -227,3 +227,18 @@ LyngkTestCase.prototype.test20 = function()
     assertEquals(taille, 5);
     assertEquals(taille2, 1);
 };
+LyngkTestCase.prototype.test21 = function()
+{
+    var engine = new Lyngk.Engine();
+    engine.initStart();
+
+    var interB5 = engine.getIntersection("B5");
+    var interC5 = engine.getIntersection("C5");
+    var interD5 = engine.getIntersection("D5");
+
+    engine.move(interB5, interC5);
+    engine.move(interD5, interC5);
+
+    var taille = interC5.getPile1();
+    assertEquals(taille, 2);
+};
