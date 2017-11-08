@@ -84,14 +84,14 @@ LyngkTestCase.prototype.test5PiecesIntersection = function()
 LyngkTestCase.prototype.testInit = function()
 {
     var engine = new Lyngk.Engine();
-    engine.init();
+    engine.initStart();
 
     assertTrue(engine.checkInit());
 };
 LyngkTestCase.prototype.testPile1 = function()
 {
     var Engine = new Lyngk.Engine();
-    Engine.init();
+    Engine.initStart();
     var intersections = Engine.getIntersections();
 
     var valid = true;
@@ -118,22 +118,22 @@ LyngkTestCase.prototype.testCouleur = function()
 LyngkTestCase.prototype.testMovePiece = function()
 {
     var Engine = new Lyngk.Engine();
-    Engine.init();
+    Engine.initStart();
 
     var IntersectionA3 = Engine.getIntersection("A3");
     var IntersectionB3 = Engine.getIntersection("B3");
 
     var colorA3 = IntersectionA3.getColor();
 
-    engine.move(IntersectionA3, IntersectionB3);
+    Engine.move(IntersectionA3, IntersectionB3);
 
     assertEquals(IntersectionB3.getColor(), colorA3);
     assertEquals(IntersectionA3.getPile1(), 0);
 };
-LyngkTestCase.prototype.testMoveStack = function()
+LyngkTestCase.prototype.testMovePile = function()
 {
     var Engine = new Lyngk.Engine();
-    Engine.init();
+    Engine.initStart();
 
     var interA3 = Engine.getIntersection("A3");
     var interB3 = Engine.getIntersection("B3");
@@ -141,8 +141,8 @@ LyngkTestCase.prototype.testMoveStack = function()
 
     var colorA3 = interA3.getColor();
 
-    engine.move(interA3, interB3);
-    engine.move(interB3, interB2);
+    Engine.move(interA3, interB3);
+    Engine.move(interB3, interB2);
 
     assertEquals(interB2.getColor(), colorA3);
     assertEquals(interB3.getPile1(), 0);

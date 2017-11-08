@@ -16,6 +16,15 @@ Lyngk.Intersection = function (c) {
         return pieces;
     };
 
+    this.takePieces = function () {
+        var tmpPieces = pieces;
+        pieces = [];
+
+        return tmpPieces;
+
+        return null;
+    };
+
     this.setPiece = function (p) {
         pieces.push(p);
         if (pieces.length == 1)
