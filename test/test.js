@@ -90,9 +90,10 @@ LyngkTestCase.prototype.testInit = function()
 };
 LyngkTestCase.prototype.testPile1 = function()
 {
-    var Engine = new Lyngk.Engine();
-    Engine.initStart();
-    var intersections = Engine.getIntersections();
+    var engine = new Lyngk.Engine();
+    engine.initStart();
+
+    var intersections = engine.getInter();
 
     var valid = true;
     for(var i = 0; i < 43; i++)
@@ -102,11 +103,12 @@ LyngkTestCase.prototype.testPile1 = function()
     }
 
     assert(valid);
-;}
+};
 LyngkTestCase.prototype.testCouleur = function()
 {
     var Engine = new Lyngk.Engine();
-    var intersections = Engine.getInter("A3");
+    Engine.initStart();
+    var intersections = Engine.getIntersection("A3");
 
     intersections.setPiece(new Lyngk.Piece(Lyngk.Color.WHITE));
     intersections.setPiece(new Lyngk.Piece(Lyngk.Color.BLACK));
@@ -146,4 +148,36 @@ LyngkTestCase.prototype.testMovePile = function()
 
     assertEquals(interB2.getColor(), colorA3);
     assertEquals(interB3.getPile1(), 0);
+};
+LyngkTestCase.prototype.test17 = function()
+{
+
+    var Engine = new Lyngk.Engine();
+    Engine.initStart();
+
+    var interB2 = Engine.getIntersection("B2");
+    var interB3 = Engine.getIntersection("B3");
+
+    Engine.move(interB2, interB3);
+
+    assertEquals(interB2.getPile1(), 0);
+};
+LyngkTestCase.prototype.test18 = function()
+{
+    var Engine = new Lyngk.Engine();
+    Engine.initStart();
+
+    var interB2 = Engine.getIntersection("B2");
+    var interB3 = Engine.getIntersection("B3");
+    var interC2 = Engine.getIntersection("C2");
+
+    Engine.move(interB2, interB3);
+
+    var taille = interB3.getPile1();
+
+    Engine.move(interB3, interC2);
+
+    var taille2 = interC2.getPile1();
+    assertEquals(taille, taille2);
+
 };

@@ -21,8 +21,42 @@ Lyngk.Engine = function () {
         }
     };
 
-    this.getIntersections = function () {
+    this.getInter = function () {
         return intersections;
+    };
+
+    this.checkInit = function () {
+        if (intersections.length != Lyngk.tableau.length)
+            return false;
+
+        for (var i = 0; i < intersections.length; i++) {
+            if (intersections[i].getState() !== Lyngk.State.ONE_PIECE)
+                return false;
+        }
+
+        return true;
+
+    };
+
+    this.move = function (inter1, inter2) {
+        if (inter2.getPile1() > 0)
+        {
+            var pieces = inter1.takePieces();
+
+            for (var i = 0; i < pieces.length; i++)
+            {
+                inter2.setPiece(pieces[i]);
+            }
+        }
+    };
+    this.getIntersection = function (c) {
+        for (var i = 0; i < intersections.length; i++)
+        {
+            if (intersections[i].getCoordinate().toString() === c)
+                return intersections[i];
+        }
+
+        return null;
     };
     this.initStart = function(){
 
@@ -42,42 +76,5 @@ Lyngk.Engine = function () {
         }
     };
 
-    this.checkInit = function () {
-        if (intersections.length != Lyngk.tableau.length)
-            return false;
-
-        for (var i = 0; i < intersections.length; i++) {
-            if (intersections[i].getState() !== Lyngk.State.ONE_PIECE)
-                return false;
-        }
-
-        return true;
-
-    };
-    this.getIntersection = function (c) {
-        for (var i = 0; i < intersections.length; i++)
-        {
-            if (intersections[i].getCoordinate().toString() === c)
-                return intersections[i];
-        }
-
-        return null;
-    };
-    this.move = function (intersection1, intersection2) {
-            var pieces = intersection1.takePieces();
-
-            for (var i = 0; i < pieces.length; i++) {
-                intersection2.setPiece(pieces[i]);
-            }
-    };
-    this.getInter = function (c) {
-        for (var i = 0; i < intersections.length; i++)
-        {
-            if (intersections[i].getCoordinate().toString() === c)
-                return intersections[i];
-        }
-
-        return null;
-    };
     init();
 }
