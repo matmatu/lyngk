@@ -39,12 +39,14 @@ Lyngk.Engine = function () {
     };
 
     this.move = function (inter1, inter2) {
-        if(checkmove(inter1,inter2)== true) {
-            if (inter2.getPile1() > 0) {
-                var pieces = inter1.takePieces();
+        if(inter1.getPile1() < 5 ) {
+            if (checkmove(inter1, inter2) == true) {
+                if (inter2.getPile1() > 0) {
+                    var pieces = inter1.takePieces();
 
-                for (var i = 0; i < pieces.length; i++) {
-                    inter2.setPiece(pieces[i]);
+                    for (var i = 0; i < pieces.length; i++) {
+                        inter2.setPiece(pieces[i]);
+                    }
                 }
             }
         }
