@@ -30,4 +30,8 @@ Lyngk.Intersection = function (c) {
         else
             return null;
     };
+
+    this.getPile1 = function(){
+        return pieces.length;
+    };
 };
