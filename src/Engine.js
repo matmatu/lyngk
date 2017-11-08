@@ -44,6 +44,17 @@ Lyngk.Engine = function () {
 
         return null;
     };
+    this.move = function (intersection1, intersection2) {
+        if (intersection2.getStackHeight() > 0)
+        {
+            var pieces = intersection1.takePieces();
+
+            for (var i = 0; i < pieces.length; i++)
+            {
+                intersection2.setPiece(pieces[i]);
+            }
+        }
+    };
     this.getInter = function (c) {
         for (var i = 0; i < intersections.length; i++)
         {
