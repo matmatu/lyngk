@@ -128,5 +128,5 @@ LyngkTestCase.prototype.testMovePiece = function()
     engine.move(IntersectionA3, IntersectionB3);
 
     assertEquals(IntersectionB3.getColor(), colorA3);
-    assertEquals(IntersectionA3.getStackHeight(), 0);
+    assertEquals(IntersectionA3.getPile1(), 0);
 };
