@@ -102,6 +102,15 @@ LyngkTestCase.prototype.testPile1 = function()
     }
 
     assert(valid);
-
-
 ;}
+LyngkTestCase.prototype.testCouleur = function()
+{
+    var Engine = new Lyngk.Engine();
+    var intersections = Engine.getInter("A3");
+
+    intersections.setPiece(new Lyngk.Piece(Lyngk.Color.WHITE));
+    intersections.setPiece(new Lyngk.Piece(Lyngk.Color.BLACK));
+    intersections.setPiece(new Lyngk.Piece(Lyngk.Color.BLUE));
+
+    assertEquals(intersections.getColor(), Lyngk.Color.BLUE);
+};

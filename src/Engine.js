@@ -14,6 +14,10 @@ Lyngk.Engine = function () {
         }
     };
 
+    this.getIntersections = function () {
+        return intersections;
+    };
+
     this.init = function () {
         for (var i = 0; i < intersections.length; i++) {
             intersections[i].setPiece(new Lyngk.Piece(Lyngk.Color.WHITE));
@@ -30,6 +34,16 @@ Lyngk.Engine = function () {
 
         return true;
 
+    };
+
+    this.getInter = function (c) {
+        for (var i = 0; i < intersections.length; i++)
+        {
+            if (intersections[i].getCoordinate().toString() === c)
+                return intersections[i];
+        }
+
+        return null;
     };
     init();
 }
