@@ -27,7 +27,7 @@ Lyngk.Intersection = function (c) {
     };
 
     this.getColor = function () {
-        if (pieces.length > 0)
+        if (pieces.length >= 1)
             return pieces[pieces.length - 1].getColor();
         else
             return null;

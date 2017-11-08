@@ -35,7 +35,15 @@ Lyngk.Engine = function () {
         return true;
 
     };
+    this.getIntersection = function (c) {
+        for (var i = 0; i < intersections.length; i++)
+        {
+            if (intersections[i].getCoordinate().toString() === c)
+                return intersections[i];
+        }
 
+        return null;
+    };
     this.getInter = function (c) {
         for (var i = 0; i < intersections.length; i++)
         {
