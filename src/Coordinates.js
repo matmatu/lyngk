@@ -33,4 +33,12 @@ Lyngk.Coordinates = function (c, l)
     {
         return colonne.charCodeAt(0) - 65 + ligne;
     };
+    this.getligne = function()
+    {
+        return ligne;
+    };
+    this.getcolonne = function()
+    {
+        return colonne;
+    };
 };

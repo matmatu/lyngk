@@ -169,7 +169,7 @@ LyngkTestCase.prototype.test18 = function()
 
     var interB2 = Engine.getIntersection("B2");
     var interB3 = Engine.getIntersection("B3");
-    var interC2 = Engine.getIntersection("C2");
+    var interC2 = Engine.getIntersection("C5");
 
     Engine.move(interB2, interB3);
 
@@ -178,6 +178,6 @@ LyngkTestCase.prototype.test18 = function()
     Engine.move(interB3, interC2);
 
     var taille2 = interC2.getPile1();
-    assertEquals(taille, taille2);
+    assertEquals(taille2, 1);
 
 };

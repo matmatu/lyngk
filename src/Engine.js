@@ -39,15 +39,46 @@ Lyngk.Engine = function () {
     };
 
     this.move = function (inter1, inter2) {
-        if (inter2.getPile1() > 0)
-        {
-            var pieces = inter1.takePieces();
+        if(checkmove(inter1,inter2)== true) {
+            if (inter2.getPile1() > 0) {
+                var pieces = inter1.takePieces();
 
-            for (var i = 0; i < pieces.length; i++)
-            {
-                inter2.setPiece(pieces[i]);
+                for (var i = 0; i < pieces.length; i++) {
+                    inter2.setPiece(pieces[i]);
+                }
             }
         }
+    };
+    var checkmove = function(inter1, inter2)
+    {
+        var interc1 = inter1.getCoordinate();
+        var interc2 = inter2.getCoordinate();
+        var l1 = interc1.getligne();
+        var l2 = interc2.getligne();
+        var c1 = interc1.getcolonne();
+        var c2 = interc2.getcolonne();
+        var Diffc = (c1.charCodeAt(0) - (c2.charCodeAt(0)));
+        //colonne
+        if(Diffc == 0 )
+        {
+                if(Math.abs(l1-l2) == 1)
+                    return true;
+                return false;
+        }
+        else if(Diffc == 1)
+        {
+            if(l1-l2==-1 || l1-l2 == 0)
+                return true;
+            return false;
+        }
+        else if(Diffc == -1)
+        {
+            if(l1-l2== 1 || l1-l2 == 0)
+                return true;
+            return false;
+        }
+
+
     };
     this.getIntersection = function (c) {
         for (var i = 0; i < intersections.length; i++)
