@@ -8,15 +8,15 @@ Lyngk.Intersection = function (c) {
     var coordone = c;
 
 
-    this.getState = function(){
+    this.getState = function () {
         return state;
     };
 
-    this.getPieces = function(){
+    this.getPieces = function () {
         return pieces;
     };
 
-    this.setPiece = function(p){
+    this.setPiece = function (p) {
         pieces.push(p);
         if (pieces.length == 1)
             state = Lyngk.State.ONE_PIECE;
@@ -26,14 +26,14 @@ Lyngk.Intersection = function (c) {
             state = Lyngk.State.STACK;
     };
 
-    this.getColor = function(){
+    this.getColor = function () {
         if (pieces.length > 0)
-            return pieces[pieces.length-1].getColor();
+            return pieces[pieces.length - 1].getColor();
         else
             return null;
     };
 
-    this.getPile1 = function(){
+    this.getPile1 = function () {
         return pieces.length;
     };
     this.getCoordinate = function () {
@@ -41,17 +41,7 @@ Lyngk.Intersection = function (c) {
     };
 
 
-    this.getState = function(){
+    this.getState = function () {
         return state;
     };
-
-    this.setPiece = function(p){
-        pieces.push(p);
-        if (pieces.length == 1)
-            state = Lyngk.State.ONE_PIECE;
-        else if (pieces.length >= 5)
-            state = Lyngk.State.FULL_STACK;
-        else
-            state = Lyngk.State.STACK;
-    };
-};
+}

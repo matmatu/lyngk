@@ -114,3 +114,19 @@ LyngkTestCase.prototype.testCouleur = function()
 
     assertEquals(intersections.getColor(), Lyngk.Color.BLUE);
 };
+
+LyngkTestCase.prototype.testMovePiece = function()
+{
+    var Engine = new Lyngk.Engine();
+    Engine.init();
+
+    var IntersectionA3 = Engine.getIntersection("A3");
+    var IntersectionB3 = Engine.getIntersection("B3");
+
+    var colorA3 = interA3.getColor();
+
+    engine.move(interA3, interB3);
+
+    assertEquals(IntersectionB3.getColor(), colorA3);
+    assertEquals(IntersectionA3.getStackHeight(), 0);
+};
