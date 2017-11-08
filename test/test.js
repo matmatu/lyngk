@@ -88,10 +88,20 @@ LyngkTestCase.prototype.testInit = function()
 
     assertTrue(engine.checkInit());
 };
-LyngkTestCase.prototype.testInit8 = function()
+LyngkTestCase.prototype.testPile1 = function()
 {
-    var engine = new Lyngk.Engine();
-    engine.init8();
+    var Engine = new Lyngk.Engine();
+    Engine.init();
+    var intersections = Engine.getIntersections();
 
-    assertTrue(engine.checkInit8());
-};
+    var valid = true;
+    for(var i = 0; i < 43; i++)
+    {
+        if (intersections[i].getPile1() !== 1)
+            valid = false;
+    }
+
+    assert(valid);
+
+
+;}
