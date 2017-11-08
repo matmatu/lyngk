@@ -205,3 +205,25 @@ LyngkTestCase.prototype.testMoveOne = function()
     var taille2 = interH5.getPile1();
     assertEquals(taille2, taille);
 };
+LyngkTestCase.prototype.test20 = function()
+{
+    var engine = new Lyngk.Engine();
+    engine.initStart();
+
+    var interB5 = engine.getIntersection("B5");
+    var interC5 = engine.getIntersection("C5");
+    var interD5 = engine.getIntersection("D5");
+    var interE5 = engine.getIntersection("E5");
+    var interF5 = engine.getIntersection("F5");
+    var interG5 = engine.getIntersection("G5");
+
+    engine.move(interB5, interC5);
+    engine.move(interC5, interD5);
+    engine.move(interD5, interE5);
+    engine.move(interE5, interF5);
+    var taille = interF5.getPile1();
+    engine.move(interF5, interG5);
+    var taille2 = interG5.getPile1();
+    assertEquals(taille, 5);
+    assertEquals(taille2, 1);
+};
