@@ -58,7 +58,8 @@ Lyngk.Engine = function () {
         var c1 = interc1.getcolonne();
         var c2 = interc2.getcolonne();
         var Diffc = (c1.charCodeAt(0) - (c2.charCodeAt(0)));
-        if(inter1.getPile1() < 5) {
+
+        if(inter1.getPile1() < 5 && inter1.getPile1() >= inter2.getPile1()) {
             if (Diffc == 0) {
                 if (Math.abs(l1 - l2) == 1)
                     return true;
