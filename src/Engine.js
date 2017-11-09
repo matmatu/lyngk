@@ -2,10 +2,17 @@
 
 // enums definition
 Lyngk.Color = {BLACK: 0, IVORY: 1, BLUE: 2, RED: 3, GREEN: 4, WHITE: 5};
-
+Lyngk.Player = {PLAYER1 : 0, PLAYER2 : 1};
 Lyngk.Engine = function () {
     var intersections = [];
+    var Player = [];
 
+    Player = Lyngk.Player.PLAYER1;
+
+    this.getPlayer = function()
+    {
+        return Player;
+    }
     var init = function(){
         var letters = "ABCDEFGHI";
 

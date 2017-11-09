@@ -286,6 +286,19 @@ LyngkTestCase.prototype.testplayer1 = function()
 {
     var engine = new Lyngk.Engine();
     engine.initStart();
+    var joueur1 = engine.getPlayer();
 
-    assertEquals(engine.getPlayer(), Lyngk.Players.PLAYER1);
+    assertEquals(joueur1, Lyngk.Player.PLAYER1);
+};
+LyngkTestCase.prototype.testPlayer = function()
+{
+    var engine = new Lyngk.Engine();
+    engine.initStart();
+
+    var interB5 = engine.getIntersection("B5");
+    var interC5 = engine.getIntersection("C5");
+
+    engine.move(interB5, interC5);
+
+    assertEquals(engine.getPlayer(), Lyngk.Player.PLAYER2);
 };
