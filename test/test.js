@@ -264,3 +264,21 @@ LyngkTestCase.prototype.testSuppMove = function()
     assertEquals(interC5.getPile1(), 2);
     assertEquals(interF5.getPile1(), 3);
 };
+LyngkTestCase.prototype.testColors = function()
+{
+    var engine = new Lyngk.Engine();
+    engine.initStart();
+
+    var interE2 = engine.getIntersection("E2");
+    var interE3 = engine.getIntersection("E3");
+    var interE4 = engine.getIntersection("E4");
+    var interE5 = engine.getIntersection("E5");
+    var interE6 = engine.getIntersection("E6");
+
+    engine.move(interE2, interE3);
+    engine.move(interE3, interE4);
+    engine.move(interE4, interE5);
+    engine.move(interE5, interE6);
+
+    assertFalse(interE6.getPile1() === 5);
+};
