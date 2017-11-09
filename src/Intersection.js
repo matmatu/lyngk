@@ -21,25 +21,25 @@ Lyngk.Intersection = function (c) {
         pieces = [];
 
         return tmpPieces;
-
-        return null;
     };
 
     this.setPiece = function (p) {
         pieces.push(p);
-        if (pieces.length == 1)
+        if (pieces.length === 1) {
             state = Lyngk.State.ONE_PIECE;
-        else if (pieces.length >= 5)
+        } else if (pieces.length >= 5) {
             state = Lyngk.State.FULL_STACK;
-        else
+        } else {
             state = Lyngk.State.STACK;
+        }
     };
 
     this.getColor = function () {
-        if (pieces.length >= 1)
+        if (pieces.length >= 1) {
             return pieces[pieces.length - 1].getColor();
-        else
+        } else {
             return null;
+        }
     };
 
     this.getPile1 = function () {
@@ -51,8 +51,9 @@ Lyngk.Intersection = function (c) {
     this.containsColor = function(c){
         for (var i = 0; i < pieces.length; i++)
         {
-            if (pieces[i].getColor() === c)
+            if (pieces[i].getColor() === c) {
                 return true;
+            }
         }
 
         return false;
@@ -63,4 +64,4 @@ Lyngk.Intersection = function (c) {
     this.getState = function () {
         return state;
     };
-}
+};
