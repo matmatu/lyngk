@@ -48,6 +48,16 @@ Lyngk.Intersection = function (c) {
     this.getCoordinate = function () {
         return coordone;
     };
+    this.containsColor = function(c){
+        for (var i = 0; i < pieces.length; i++)
+        {
+            if (pieces[i].getColor() === c)
+                return true;
+        }
+
+        return false;
+    };
+
 
 
     this.getState = function () {

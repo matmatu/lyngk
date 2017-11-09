@@ -58,7 +58,16 @@ Lyngk.Engine = function () {
         var c1 = interc1.getcolonne();
         var c2 = interc2.getcolonne();
         var Diffc = (c1.charCodeAt(0) - (c2.charCodeAt(0)));
+        var inter1Pieces = inter1.getPieces();
 
+        for (var i = 0; i < inter1.getPile1(); i++)
+        {
+            var color = inter1Pieces[i].getColor();
+            if (color !== Lyngk.Color.WHITE && inter2.containsColor(color))
+            {
+                return false;
+            }
+        }
         if(inter1.getPile1() < 5 && inter1.getPile1() >= inter2.getPile1()) {
             if (Diffc == 0) {
                 if (Math.abs(l1 - l2) == 1)
