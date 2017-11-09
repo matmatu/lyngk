@@ -282,3 +282,10 @@ LyngkTestCase.prototype.testColors = function()
 
     assertFalse(interE6.getPile1() === 5);
 };
+LyngkTestCase.prototype.testplayer1 = function()
+{
+    var engine = new Lyngk.Engine();
+    engine.initStart();
+
+    assertEquals(engine.getPlayer(), Lyngk.Players.PLAYER1);
+};
