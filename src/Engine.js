@@ -54,6 +54,7 @@ Lyngk.Engine = function () {
                         inter2.setPiece(pieces[i]);
                     }
                 }
+                Player = (Player +1)%2;
             }
     };
     var checkmove = function(inter1, inter2)
